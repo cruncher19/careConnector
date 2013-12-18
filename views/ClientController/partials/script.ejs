@@ -1,0 +1,39 @@
+<script>
+    $("#registerButton").click(function() {
+        var firstName = $("#firstName").val();
+        var lastName = $("#lastName").val();
+        var street1 = $("#street1").val();
+        var street2 = $("#street2").val();
+        var city = $("#city").val();
+        var province = $("#province").val();
+        var country = $("#country").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var verifyPassword = $("#verifyPassword").val();
+        if( password !== verifyPassword){
+            console.log("password mitchmatch");
+        } else if( firstName && lastName && street1 
+            && city && province
+            && country && email && password ) {
+            $.post(
+                '/client/register',
+                {firstName: firstName,
+                    lastName: lastName,
+                    street1: street1,
+                    street2: street2,
+                    city: city,
+                    province: province,
+                    country: country,
+                    email: email,
+                    password: password},
+                    function() {
+                        alert("Registration successful");
+                    }
+            ).fail(function(res){
+                alert("Error: " + res.getResponseHeader("error"));
+            });
+        } else {
+            alert("Please fill out all of the required fields");
+        }
+    });
+</script>

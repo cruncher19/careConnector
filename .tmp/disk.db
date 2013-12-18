@@ -81,6 +81,22 @@
         "password": "sha1$53d31efb$1$5584e46bfed539443ea6c072508ee0ee72e7c517",
         "createdAt": "2013-12-18T20:22:15.042Z",
         "updatedAt": "2013-12-18T20:22:15.042Z"
+      },
+      {
+        "id": 5,
+        "firstName": "a",
+        "lastName": "a",
+        "address": {
+          "street1": "a",
+          "street2": "a",
+          "city": "a",
+          "province": "a",
+          "country": "a"
+        },
+        "email": "ss@s.com",
+        "password": "sha1$c4a18035$1$17de7d8d4b7a9e556a54d4caa7e2bc3633da37d7",
+        "createdAt": "2013-12-18T23:45:53.593Z",
+        "updatedAt": "2013-12-18T23:45:53.593Z"
       }
     ],
     "job": [],
