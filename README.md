@@ -1,2 +1,2 @@
-careConnector
-=============
+# patientConnector
+### a Sails application

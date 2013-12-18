@@ -1,0 +1,176 @@
+{
+  "data": {
+    "user": [],
+    "client": [
+      {
+        "id": 0,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "bradcovey@gmail.com",
+        "password": "sha1$f9dd5fe7$1$ac88a14f6bbb83f95eb3550189b4f5857c7cf324",
+        "createdAt": "2013-12-18T20:11:28.216Z",
+        "updatedAt": "2013-12-18T20:11:28.216Z"
+      },
+      {
+        "id": 1,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "test@gmail.com",
+        "password": "sha1$fbc0b105$1$d79cc5f401e1cb71fcb1cf0ab335a61e0fa4829c",
+        "createdAt": "2013-12-18T20:16:58.786Z",
+        "updatedAt": "2013-12-18T20:16:58.786Z"
+      },
+      {
+        "id": 2,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "tes2t@gmail.com",
+        "password": "sha1$f5904ce0$1$eb2441265524f587316fd963f522e904078f0e8f",
+        "createdAt": "2013-12-18T20:20:00.876Z",
+        "updatedAt": "2013-12-18T20:20:00.876Z"
+      },
+      {
+        "id": 3,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "tes23t@gmail.com",
+        "password": "sha1$48c8164f$1$4de78bad9470f64c8f370d165988737c8ff9f6c1",
+        "createdAt": "2013-12-18T20:21:22.061Z",
+        "updatedAt": "2013-12-18T20:21:22.061Z"
+      },
+      {
+        "id": 4,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "tes233t@gmail.com",
+        "password": "sha1$53d31efb$1$5584e46bfed539443ea6c072508ee0ee72e7c517",
+        "createdAt": "2013-12-18T20:22:15.042Z",
+        "updatedAt": "2013-12-18T20:22:15.042Z"
+      }
+    ],
+    "job": [],
+    "serviceprovider": []
+  },
+  "schema": {
+    "user": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "defaultsTo": "AUTO_INCREMENT",
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime",
+        "default": "NOW"
+      },
+      "updatedAt": {
+        "type": "datetime",
+        "default": "NOW"
+      }
+    },
+    "client": {
+      "id": {
+        "type": "integer"
+      },
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "address": {
+        "type": "json"
+      },
+      "email": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "createdAt": {
+        "type": "datetime",
+        "default": "NOW"
+      },
+      "updatedAt": {
+        "type": "datetime",
+        "default": "NOW"
+      }
+    },
+    "job": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "defaultsTo": "AUTO_INCREMENT",
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime",
+        "default": "NOW"
+      },
+      "updatedAt": {
+        "type": "datetime",
+        "default": "NOW"
+      }
+    },
+    "serviceprovider": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "defaultsTo": "AUTO_INCREMENT",
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime",
+        "default": "NOW"
+      },
+      "updatedAt": {
+        "type": "datetime",
+        "default": "NOW"
+      }
+    }
+  },
+  "counters": {
+    "user": {},
+    "client": {},
+    "job": {},
+    "serviceprovider": {}
+  }
+}
