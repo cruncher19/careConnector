@@ -97,6 +97,38 @@
         "password": "sha1$c4a18035$1$17de7d8d4b7a9e556a54d4caa7e2bc3633da37d7",
         "createdAt": "2013-12-18T23:45:53.593Z",
         "updatedAt": "2013-12-18T23:45:53.593Z"
+      },
+      {
+        "id": 6,
+        "firstName": "n",
+        "lastName": "n",
+        "address": {
+          "street1": "n",
+          "street2": "n",
+          "city": "n",
+          "province": "n",
+          "country": "n"
+        },
+        "email": "nn@n.com",
+        "password": "sha1$3dede0a1$1$8d63ac76a1571039118189ae93177fe27c05b80a",
+        "createdAt": "2013-12-18T23:55:48.936Z",
+        "updatedAt": "2013-12-18T23:55:48.936Z"
+      },
+      {
+        "id": 7,
+        "firstName": "Brad",
+        "lastName": "Covey",
+        "address": {
+          "street1": "test street",
+          "street2": "testStreet2",
+          "city": "Halifax",
+          "province": "Nova Scotia",
+          "country": "Canada"
+        },
+        "email": "test@test.test",
+        "password": "sha1$0d028910$1$92c1146bd532ddbb90982a8cd0072515293e2a5c",
+        "createdAt": "2013-12-19T00:14:05.149Z",
+        "updatedAt": "2013-12-19T00:14:05.149Z"
       }
     ],
     "job": [],

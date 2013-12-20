@@ -36,9 +36,14 @@ module.exports.routes = {
     view: 'home/index'
   },
 
-  '/registration': {
+  '/registrationpage': {
     controller: 'ClientController',
     action: 'registrationPage'
+  },
+
+  '/loginpage': {
+    controller: 'ClientController',
+    action: 'loginPage'
   }
 
   /*

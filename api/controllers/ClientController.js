@@ -65,11 +65,36 @@ module.exports = {
             }
         });
     },
+    login: function(req, res) {
+        var email = req.param('email');
+        var password = req.param('password');
+
+        Client.findByEmail(email, function(err, client) {
+            console.log(client[0]);
+            if( err ) {
+                res.send(500,{error: "DB Error", err: err});
+            } else if(client.length === 0) {
+                res.send(400,{error: "Email or password incorrect"});
+            } else {
+                var hasher = require('password-hash');
+
+                if(hasher.verify(password, client[0].password)) {
+                    req.session.user = client[0];
+                    res.send(client[0]);
+                } else {
+                    res.send(400,{error: "Email or password incorrect"});
+                }
+            }
+        });
+    },
     test: function(req, res) {
-        res.send("swag");
+        res.send(req.session.user);
     },
     registrationPage: function(req, res) {
         res.view('ClientController/registrationPage');
+    },
+    loginPAge: function(req, res) {
+        res.view('ClientController/loginPage');
     },
   
 

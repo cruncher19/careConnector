@@ -9,11 +9,34 @@
 module.exports = {
 
   attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
+    id: {
+        type: 'integer',
+        required: true
+    },
+    firstName: {
+        type: 'string',
+        required: true
+    },
+    lastName: {
+        type: 'string',
+        required: true
+    },
+    address: {
+        type: 'json',
+        required: true
+    },
+    email: {
+        type: 'email',
+        required:true
+    },
+    password: {
+        type: 'string',
+        required: true
+    },
+    serviceRadius: {
+        type: 'integer',
+        required: true
+    }
   }
 
 };

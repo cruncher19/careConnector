@@ -1,0 +1,18 @@
+<script>
+    $("#loginButton").click(function() {
+        var email = $("#email").val();
+        var password = $("#password").val();
+
+        if( email && password ) {
+            $.post('/client/login', {
+                email: email,
+                password: password},
+                function() {
+                    alert("Login Successful");
+                }
+            ).fail(function(res){
+                alert("Error: " + res.getResponseHeader("error"));
+            });
+        }
+    });
+</script>
