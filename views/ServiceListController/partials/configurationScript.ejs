@@ -1,0 +1,16 @@
+<script>
+    $("#submit").click(function() {
+        var nursing = $("#nursing").is(":checked");
+
+        $.post(
+            '/servicelist/update',
+            {nursing: nursing},
+            function(res){
+                console.log(res);
+                alert("service list configuration successful");
+            }
+        ).fail(function(res){
+            alert("Error: " + res.getResponseHeader("error"));
+        });
+    });
+</script>

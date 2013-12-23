@@ -16,7 +16,13 @@
  */
 
 module.exports = {
+    //register is the action called when the user clicks the register button
+    //javascript embedded in the page retrieves all of the values
+    //and calls this register action using a post
     register: function(req, res) {
+
+        //retrieving the input parameters from
+        //the request variable
         var firstName = req.param('firstName');
         var lastName = req.param('lastName');
         var address = {
@@ -28,27 +34,41 @@ module.exports = {
         };
         var email = req.param('email');
         var password = req.param('password');
+        //initializing id
         var id = 0;
 
+        //setting id equal to 1 more than the current maximum
+        //id in the database
         Client.find().exec(function(err, clients){
             if(err){
-                res.send(500,{error: "Client not in DB"});
+                res.send(500,{error: "Client table not in DB"});
             } else {
-                id = clients.length;
+                id = clients.length + 1;
             }
         });
 
+        //checking of the email address has already
+        //been registered
         Client.findByEmail(email,function(err,client){
             if(err){
                 res.send(500,{error: "DB Error",err: err});
+            //send out an error message if the email has already
+            //been registered
             } else if(client.length != 0){
                 res.send(400,{error: "Email already used",client: client});
             } else {
+                //hashing the password so it isn't
+                //stored in plaintext in the database
                 var hasher = require('password-hash');
                 password = hasher.generate(password);
 
+                //creating the client
                 Client.create({
                     id: id,
+                    //service provider flag is necessary
+                    //because client and service provider use
+                    //the same session variable, need to differentiate
+                    isServiceProvider: false,
                     firstName: firstName,
                     lastName: lastName,
                     address: address,
@@ -58,6 +78,9 @@ module.exports = {
                     if(err){
                         res.send(500,{error: "DB Error"});
                     } else {
+                        //if creation was sucessful set the current
+                        //session user equal to the newly created
+                        //serviceProvider
                         req.session.user = client;
                         res.send(client);
                     }
@@ -90,6 +113,8 @@ module.exports = {
     test: function(req, res) {
         res.send(req.session.user);
     },
+
+    //methods to serve pages
     registrationPage: function(req, res) {
         res.view('ClientController/registrationPage');
     },

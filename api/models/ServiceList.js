@@ -13,6 +13,6 @@ module.exports = {
         type: 'integer',
         required: true
     },
-    nurse: 'boolean'
+    nursing: 'boolean'
   }
 };

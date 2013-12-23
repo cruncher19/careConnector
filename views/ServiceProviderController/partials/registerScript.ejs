@@ -7,16 +7,17 @@
         var city = $("#city").val();
         var province = $("#province").val();
         var country = $("#country").val();
+        var serviceRadius = $("#serviceRadius").val();
         var email = $("#email").val();
         var password = $("#password").val();
         var verifyPassword = $("#verifyPassword").val();
-        if( password !== verifyPassword){
+        if( password !== verifyPassword) {
             console.log("password mismatch");
-        } else if( firstName && lastName && street1 
-            && city && province
-            && country && email && password ) {
+        } else if( firstName && lastName && street1
+            && city && province &&country 
+            && serviceRadius && email && password) {
             $.post(
-                '/client/register',
+                '/serviceprovider/register',
                 {firstName: firstName,
                     lastName: lastName,
                     street1: street1,
@@ -24,16 +25,16 @@
                     city: city,
                     province: province,
                     country: country,
+                    serviceRadius: serviceRadius,
                     email: email,
                     password: password},
                     function() {
                         alert("Registration successful");
+                        window.location = '/servicelist/configuration';
                     }
-            ).fail(function(res){
+            ).fail(function(res) {
                 alert("Error: " + res.getResponseHeader("error"));
             });
-        } else {
-            alert("Please fill out all of the required fields");
         }
     });
 </script>

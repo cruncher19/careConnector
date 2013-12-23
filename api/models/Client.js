@@ -13,6 +13,10 @@ module.exports = {
         type: 'integer',
         required: true
     },
+    isServiceProvider: {
+        type: 'boolean',
+        required: true
+    },
     firstName: {
         type: 'string',
         required: true
