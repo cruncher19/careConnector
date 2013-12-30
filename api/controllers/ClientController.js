@@ -78,7 +78,7 @@ module.exports = {
                     if(err){
                         res.send(500,{error: "DB Error"});
                     } else {
-                        //if creation was sucessful set the current
+                        //if creation was successful set the current
                         //session user equal to the newly created
                         //serviceProvider
                         req.session.user = client;
@@ -118,7 +118,7 @@ module.exports = {
     registrationPage: function(req, res) {
         res.view('ClientController/registrationPage');
     },
-    loginPAge: function(req, res) {
+    loginPage: function(req, res) {
         res.view('ClientController/loginPage');
     },
   

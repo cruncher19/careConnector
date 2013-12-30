@@ -19,6 +19,7 @@ module.exports = {
     //register is the action called when the user clicks the register button
     //javascript embedded in the page retrieves all of the values
     //and calls this register action using a post
+    //create a new user if a user with the same email doesn't already exist
     register: function(req, res) {
         
         //retrieving the input parameters from 
@@ -42,7 +43,7 @@ module.exports = {
         //id in the database
         ServiceProvider.find().exec(function(err, serviceProviders){
             if(err){
-                res.send(500,{error: "Client table not in DB"});
+                res.send(500,{error: "serviceProvider table not in DB"});
             } else {
                 console.log(serviceProviders.length);
                 id = serviceProviders.length + 1;
@@ -51,12 +52,12 @@ module.exports = {
 
         //checking of the email address has already
         //been registered
-        ServiceProvider.findByEmail(email,function(err,client){
+        ServiceProvider.findByEmail(email,function(err,serviceProvider){
             if(err){
                 res.send(500,{error: "DB Error",err: err});
             //send out an error message if the email has already
             //been registered
-            } else if(client.length !== 0){
+            } else if(serviceProvider.length !== 0){
                 res.send(400,{error: "Email already used"});
             } else {
                 //hashing the password so it isn't
@@ -78,7 +79,7 @@ module.exports = {
                     if(err){
                         res.send(500,{error: "DB Error", err: err});
                     } else {
-                        //if creation was sucessful set the current
+                        //if creation was successful set the current
                         //session user equal to the newly created
                         //serviceProvider
                         req.session.user = serviceProvider;
@@ -91,10 +92,64 @@ module.exports = {
             }
         });
     },
+    login: function(req, res) {
+        var email = req.param('email');
+        var password = req.param('password');
+
+        ServiceProvider.findByEmail(email, function(err, serviceProvider) {
+            if(err) {
+                res.send(500,{error: "DB Error", err: err});
+            } else if(serviceProvider.length === 0) {
+                res.send(400,{error: "Email or password incorrect"});
+            } else {
+                var hasher = require('password-hash');
+
+                if(hasher.verify(password, serviceProvider[0].password)) {
+                    req.session.user =  serviceProvider[0];
+                    res.send({redirectTo: '/serviceprovider/logoutpage'});
+                } else {
+                    res.send(400,{error: "Email or password incorrect"});
+                }
+            }
+        });
+    },
+    logout: function(req, res) {
+        req.session.user = null;
+        res.send({message: "Logout Successful", redirectTo: '/serviceprovider/loginpage'});
+    },
+
+    //function to retrieve the serviceList for the current logged in serviceProvider
+    getServiceList: function(req, res) {
+        //retrieve id parameter from the request
+        var id = req.session.user.id;
+        //find the corresponding serviceList
+        ServiceList.findByServiceProviderId(id, function(err,serviceList) {
+            //give an error if the query fails
+            if(err){
+                res.send(500, {error: "DB Error", err: err});
+            } else {
+                if(serviceList.length === 1){
+                    res.send(serviceList);
+                //give an error if the serviceList can't be found
+                } else if(serviceList.length > 1){
+                    res.send(400, {error: "multiple serviceLists with given id", serviceProviderID: id});
+                } else {
+                    res.send(400, {error: "no serviceList corresponding to serviceProviderId", serviceProviderId: id});
+                }
+            }
+        });
+
+    },
 
     //methods to serve pages
     registrationPage: function(req, res) {
         res.view('ServiceProviderController/registrationPage');
+    },
+    loginPage: function(req, res) {
+        res.view('ServiceProviderController/loginPage');
+    },
+    logoutPage:function(req, res) {
+        res.view('ServiceProviderController/partials/logoutButton.ejs');
     },
 
   /**

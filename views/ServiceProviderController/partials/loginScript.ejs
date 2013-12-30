@@ -4,7 +4,7 @@
         var password = $("#password").val();
 
         if( email && password ) {
-            $.post('/client/login', {
+            $.post('/serviceprovider/login', {
                 email: email,
                 password: password},
                 function(res) {

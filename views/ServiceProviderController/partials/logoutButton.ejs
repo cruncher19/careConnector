@@ -1,0 +1,16 @@
+<div>
+    <button id="logoutButton">Logout</button>
+</div>
+<script>
+    $('#logoutButton').click(function() {
+        $.post('/serviceprovider/logout', {},
+            function(res) {
+                alert(res.message);
+                if(res.redirectTo)
+                    window.location = res.redirectTo;
+            }
+            ).fail(function(res){
+                alert("Error: " + res.getResponseHeader("error"));
+            });
+    })
+</script>    

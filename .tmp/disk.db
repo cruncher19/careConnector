@@ -170,299 +170,54 @@
       {
         "id": 1,
         "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
+        "firstName": "Brad",
+        "lastName": "Covey",
         "address": {
-          "street1": "addr",
+          "street1": "791 Hermans Island Road",
           "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
+          "city": "Mahone Bay",
+          "province": "Nova Scotia",
+          "country": "Canada"
         },
-        "email": "a@b.c",
-        "password": "sha1$5fe53333$1$802bbaef307e02e468127e715ba45d27c38c7efe",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:19.071Z",
-        "updatedAt": "2013-12-22T23:46:19.071Z"
+        "email": "bradcovey@gmail.com",
+        "password": "sha1$28037d7f$1$33838706753ff0ff7b402d64a4f531802fbcb4ec",
+        "serviceRadius": 100,
+        "createdAt": "2013-12-29T21:40:54.775Z",
+        "updatedAt": "2013-12-29T21:40:54.775Z"
       },
       {
         "id": 2,
         "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
+        "firstName": "test",
+        "lastName": "test",
         "address": {
-          "street1": "addr",
+          "street1": "test",
           "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
+          "city": "test",
+          "province": "test",
+          "country": "test"
         },
-        "email": "ab@b.c",
-        "password": "sha1$f61bc53b$1$7426cc86020b0cfe216e451e94e779da44039e2d",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:23.489Z",
-        "updatedAt": "2013-12-22T23:46:23.489Z"
-      },
-      {
-        "id": 3,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "addr",
-          "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
-        },
-        "email": "abc@b.c",
-        "password": "sha1$e01bf1ac$1$17491939dbee3146260a736a11918455f073264b",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:27.339Z",
-        "updatedAt": "2013-12-22T23:46:27.339Z"
-      },
-      {
-        "id": 4,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "addr",
-          "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
-        },
-        "email": "abcd@b.c",
-        "password": "sha1$fc7cc431$1$5339dcb319d324a8f5d82f3ce363f125653d8130",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:31.498Z",
-        "updatedAt": "2013-12-22T23:46:31.498Z"
-      },
-      {
-        "id": 5,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "addr",
-          "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
-        },
-        "email": "abcde@b.c",
-        "password": "sha1$7809e031$1$65945b1da19602a4f50670ce131f2689c4a46252",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:35.101Z",
-        "updatedAt": "2013-12-22T23:46:35.101Z"
-      },
-      {
-        "id": 6,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "addr",
-          "street2": "",
-          "city": "city",
-          "province": "province",
-          "country": "country"
-        },
-        "email": "abcdef@b.c",
-        "password": "sha1$8ece1448$1$7269428daa36022fbdf1dd5f5d44d0be9f1e9191",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:46:38.923Z",
-        "updatedAt": "2013-12-22T23:46:38.923Z"
-      },
-      {
-        "id": 7,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "d",
-          "street2": "",
-          "city": "c",
-          "province": "f",
-          "country": "e"
-        },
-        "email": "asd@d.com",
-        "password": "sha1$a0c863e2$1$2de74bde501fc35c9ed80d0d72225df84c8336c5",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-22T23:53:23.667Z",
-        "updatedAt": "2013-12-22T23:53:23.667Z"
-      },
-      {
-        "id": 8,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "asdf@k.com",
-        "password": "sha1$f5e69557$1$b01f67d66c1791574ed01864591dd5136951a2c9",
-        "serviceRadius": 12,
-        "createdAt": "2013-12-23T00:02:34.368Z",
-        "updatedAt": "2013-12-23T00:02:34.368Z"
-      },
-      {
-        "id": 9,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "d",
-          "street2": "",
-          "city": "l",
-          "province": "k",
-          "country": "j"
-        },
-        "email": "lkj@k.com",
-        "password": "sha1$e58bf35d$1$8130f159f63c81e876451c0816766dbb747a3a61",
-        "serviceRadius": 14,
-        "createdAt": "2013-12-23T00:03:21.511Z",
-        "updatedAt": "2013-12-23T00:03:21.511Z"
-      },
-      {
-        "id": 10,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "a@a.com",
-        "password": "sha1$b35dbc34$1$d80219d64125de2118a9e89bf8b3ec0f8c35b607",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T00:54:13.757Z",
-        "updatedAt": "2013-12-23T00:54:13.757Z"
-      },
-      {
-        "id": 11,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "ab@a.com",
-        "password": "sha1$0c373a5b$1$e768ca398c1bd2f91bc6f91413893f640408d7e4",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T00:55:27.023Z",
-        "updatedAt": "2013-12-23T00:55:27.023Z"
-      },
-      {
-        "id": 12,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "abc@a.com",
-        "password": "sha1$acec7261$1$8c9df32ae0caef110b1c417e84780118e59acc27",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T00:56:18.597Z",
-        "updatedAt": "2013-12-23T00:56:18.597Z"
-      },
-      {
-        "id": 13,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "abcd@a.com",
-        "password": "sha1$81f11b60$1$62f0e51f9dcf9f6a7e6605198aa986fe6b824198",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T01:03:15.286Z",
-        "updatedAt": "2013-12-23T01:03:15.286Z"
-      },
-      {
-        "id": 14,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "abcde@a.com",
-        "password": "sha1$4dc28840$1$b7505e8180e6386fca73fe5502374e6eb4c5dc5e",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T01:18:01.492Z",
-        "updatedAt": "2013-12-23T01:18:01.492Z"
-      },
-      {
-        "id": 15,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "abcdef@a.com",
-        "password": "sha1$38ac5726$1$32e1105c150b78ebf9832050f88bc2acc7a1fca9",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T01:19:17.832Z",
-        "updatedAt": "2013-12-23T01:19:17.832Z"
-      },
-      {
-        "id": 16,
-        "isServiceProvider": true,
-        "firstName": "a",
-        "lastName": "b",
-        "address": {
-          "street1": "c",
-          "street2": "",
-          "city": "d",
-          "province": "e",
-          "country": "f"
-        },
-        "email": "abcdefg@a.com",
-        "password": "sha1$c89ddad1$1$dc51cc89346d3eaf3e8d783b534c65afe338866d",
-        "serviceRadius": 13,
-        "createdAt": "2013-12-23T01:22:24.585Z",
-        "updatedAt": "2013-12-23T01:22:24.585Z"
+        "email": "test@test.com",
+        "password": "sha1$2c15fd3a$1$f23711ee0fa3fc9553b87fdf3b580daa76578283",
+        "serviceRadius": 1212,
+        "createdAt": "2013-12-30T00:03:01.899Z",
+        "updatedAt": "2013-12-30T00:03:01.899Z"
       }
     ],
     "servicelist": [
       {
-        "serviceProviderId": 16,
+        "serviceProviderId": 1,
         "nursing": true,
-        "createdAt": "2013-12-23T01:22:37.336Z",
-        "updatedAt": "2013-12-23T01:22:37.336Z",
-        "id": 1
+        "createdAt": "2013-12-29T21:40:58.727Z",
+        "updatedAt": "2013-12-29T21:40:58.727Z",
+        "id": 3
+      },
+      {
+        "serviceProviderId": 2,
+        "nursing": true,
+        "createdAt": "2013-12-30T00:03:07.334Z",
+        "updatedAt": "2013-12-30T00:03:07.334Z",
+        "id": 4
       }
     ]
   },
@@ -578,7 +333,7 @@
       "id": 4
     },
     "servicelist": {
-      "id": 1
+      "id": 4
     }
   }
 }

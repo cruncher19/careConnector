@@ -49,6 +49,14 @@ module.exports.routes = {
     controller: 'ServiceProviderController',
     action: 'registrationPage'
   },
+  '/serviceprovider/loginpage': {
+    controller: 'ServiceProviderController',
+    action: 'loginPage'
+  },
+  '/serviceprovider/logoutpage': {
+    controller: 'ServiceProviderController',
+    action: 'logoutPage'
+  },
 
   '/servicelist/configuration': {
     controller: 'ServiceListController',

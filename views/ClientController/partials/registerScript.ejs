@@ -26,8 +26,10 @@
                     country: country,
                     email: email,
                     password: password},
-                    function() {
+                    function(res) {
                         alert("Registration successful");
+                        if(res.redirectTo)
+                            window.location = res.redirectTo;
                     }
             ).fail(function(res){
                 alert("Error: " + res.getResponseHeader("error"));
