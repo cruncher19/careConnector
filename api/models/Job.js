@@ -9,11 +9,28 @@
 module.exports = {
 
   attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
+    title: {
+        type: 'string',
+        required: true
+    },
+    description: {
+        type: 'string'
+    },
+    clientId: {
+        type: 'integer',
+        required: true
+    },
+    assignedServiceProviderId: {
+        type: 'integer'
+    },
+    address: {
+        type: 'json',
+        required: true
+    },
+    completed: {
+        type: 'boolean',
+        required: true
+    }
   }
 
 };
