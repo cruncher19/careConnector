@@ -106,7 +106,7 @@ module.exports = {
 
                 if(hasher.verify(password, serviceProvider[0].password)) {
                     req.session.user =  serviceProvider[0];
-                    res.send({redirectTo: '/serviceprovider/logoutpage'});
+                    res.send({redirectTo: '/job/joblistpage'});
                 } else {
                     res.send(400,{error: "Email or password incorrect"});
                 }

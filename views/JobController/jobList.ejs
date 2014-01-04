@@ -1,0 +1,33 @@
+<div>
+    <h1>List of Jobs</h1>
+    <table style="text-align: center;">
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Client Name</th>
+            <th>Address</th>
+            <th>Assigned</th>
+            <th>Completed</th>
+        </tr>
+        <% for(var i=0; i<jobs.length; i++) {%>
+            <tr>
+                <td><%= jobs[i].service %></td>
+                <td><%= jobs[i].description %></td>
+                <td><%= jobs[i].clientName %></td>
+                <td><%= jobs[i].address.street1 %>
+                    <% if(jobs[i].address.street2) {%>
+                        <%= jobs[i].address.street2 %>
+                    <% } %>
+                    <%= jobs[i].address.city %>, <%= jobs[i].address.province %>
+                </td>
+                <td><% if(jobs[i].assignedServiceProviderId) { %>
+                        yes
+                    <% } else { %>
+                        no
+                    <% } %>
+                </td>
+                <td><%= jobs[i].completed %></td>
+            </tr>
+        <% } %>
+    </table>
+</div>

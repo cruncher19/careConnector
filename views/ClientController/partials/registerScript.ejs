@@ -38,4 +38,10 @@
             alert("Please fill out all of the required fields");
         }
     });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 13){
+            $("#registerButton").click();
+        }
+    });
 </script>

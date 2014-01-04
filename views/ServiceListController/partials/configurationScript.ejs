@@ -6,11 +6,18 @@
             '/servicelist/update',
             {nursing: nursing},
             function(res){
-                console.log(res);
                 alert("service list configuration successful");
+                if(res.redirectTo)
+                    window.location = res.redirectTo;
             }
         ).fail(function(res){
             alert("Error: " + res.getResponseHeader("error"));
         });
+    });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 13){
+            $("#submit").click();
+        }
     });
 </script>

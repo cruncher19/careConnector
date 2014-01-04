@@ -34,7 +34,7 @@ module.exports = {
                     if(err) {
                         res.send(500,{error: "DB Error", err: err});
                     } else {
-                        res.send(serviceList);
+                        res.send({redirectTo: '/job/joblistpage'});
                     }
                 });
             //if a serviceList already exists, update it
@@ -44,7 +44,7 @@ module.exports = {
                 },{
                     nursing: nursing
                 },function(err, serviceList){
-                    res.send(serviceList);
+                    res.send({redirectTo: '/job/joblistpage'});
                 });
             //throw an error if there are multiple lists for one id
             } else {

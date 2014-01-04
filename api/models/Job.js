@@ -9,7 +9,7 @@
 module.exports = {
 
   attributes: {
-    title: {
+    service: {
         type: 'string',
         required: true
     },
@@ -18,6 +18,10 @@ module.exports = {
     },
     clientId: {
         type: 'integer',
+        required: true
+    },
+    clientName: {
+        type: 'string',
         required: true
     },
     assignedServiceProviderId: {

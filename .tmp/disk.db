@@ -184,97 +184,124 @@
     ],
     "job": [
       {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:12.778Z",
-        "updatedAt": "2014-01-02T18:16:12.778Z",
-        "id": 1
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:19.450Z",
-        "updatedAt": "2014-01-02T18:16:19.450Z",
-        "id": 2
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:20.614Z",
-        "updatedAt": "2014-01-02T18:16:20.614Z",
-        "id": 3
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:21.576Z",
-        "updatedAt": "2014-01-02T18:16:21.576Z",
-        "id": 4
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:22.353Z",
-        "updatedAt": "2014-01-02T18:16:22.353Z",
-        "id": 5
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:22.999Z",
-        "updatedAt": "2014-01-02T18:16:22.999Z",
-        "id": 6
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:23.577Z",
-        "updatedAt": "2014-01-02T18:16:23.577Z",
-        "id": 7
-      },
-      {
-        "title": "test",
-        "clientId": 10,
-        "assignedServiceProviderId": 5,
-        "address": "{}",
-        "createdAt": "2014-01-02T18:16:24.225Z",
-        "updatedAt": "2014-01-02T18:16:24.225Z",
-        "id": 8
-      },
-      {
-        "title": "Test Job",
-        "description": "Test job description.",
+        "service": "nursing",
+        "description": "job 1",
         "clientId": 11,
-        "address": "{street: 'swag street'}",
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
         "completed": false,
-        "createdAt": "2014-01-02T19:03:47.491Z",
-        "updatedAt": "2014-01-02T19:03:47.491Z",
-        "id": 9
+        "createdAt": "2014-01-04T05:27:10.064Z",
+        "updatedAt": "2014-01-04T05:27:10.064Z",
+        "id": 21
       },
       {
-        "title": "Test Job",
-        "description": "Test job description.",
+        "service": "nursing",
+        "description": "job 2",
         "clientId": 11,
-        "address": "{street: 'swag street'}",
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
         "completed": true,
-        "createdAt": "2014-01-02T19:05:15.242Z",
-        "updatedAt": "2014-01-02T19:06:30.972Z",
-        "id": 10,
-        "assignedServiceProviderId": 5
+        "createdAt": "2014-01-04T05:27:14.516Z",
+        "updatedAt": "2014-01-04T05:32:55.055Z",
+        "id": 22,
+        "assignedServiceProviderId": 3
+      },
+      {
+        "service": "nursing",
+        "description": "job 3",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "completed": false,
+        "createdAt": "2014-01-04T05:27:16.224Z",
+        "updatedAt": "2014-01-04T05:27:16.224Z",
+        "id": 23
+      },
+      {
+        "service": "nursing",
+        "description": "job 4",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "completed": false,
+        "createdAt": "2014-01-04T05:27:18.134Z",
+        "updatedAt": "2014-01-04T05:27:18.134Z",
+        "id": 24
+      },
+      {
+        "service": "nursing",
+        "description": "job 5",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "completed": false,
+        "createdAt": "2014-01-04T05:27:19.795Z",
+        "updatedAt": "2014-01-04T05:27:19.795Z",
+        "id": 25
+      },
+      {
+        "service": "nursing",
+        "description": "job 6",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "completed": false,
+        "createdAt": "2014-01-04T05:27:21.327Z",
+        "updatedAt": "2014-01-04T05:27:21.327Z",
+        "id": 26
+      },
+      {
+        "service": "nursing",
+        "description": "job 7",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "completed": false,
+        "createdAt": "2014-01-04T05:27:23.254Z",
+        "updatedAt": "2014-01-04T05:27:23.254Z",
+        "id": 27
       }
     ],
     "serviceprovider": [
@@ -313,6 +340,60 @@
         "serviceRadius": 1212,
         "createdAt": "2013-12-30T00:03:01.899Z",
         "updatedAt": "2013-12-30T00:03:01.899Z"
+      },
+      {
+        "id": 3,
+        "isServiceProvider": true,
+        "firstName": "test",
+        "lastName": "this",
+        "address": {
+          "street1": "redirect",
+          "street2": "",
+          "city": "yeah",
+          "province": "yeah",
+          "country": "yeah"
+        },
+        "email": "test@email.com",
+        "password": "sha1$b4f55616$1$592ba84bf324108beec277fa7ffe74ffd9987299",
+        "serviceRadius": 123,
+        "createdAt": "2014-01-04T05:38:41.647Z",
+        "updatedAt": "2014-01-04T05:38:41.647Z"
+      },
+      {
+        "id": 4,
+        "isServiceProvider": true,
+        "firstName": "test",
+        "lastName": "test",
+        "address": {
+          "street1": "yeah",
+          "street2": "",
+          "city": "yeah",
+          "province": "yeah",
+          "country": "yeah"
+        },
+        "email": "yeah@yeah.com",
+        "password": "sha1$70b98aac$1$6d4e54d10ec04b0124dc97e1ee4bf3870c05027b",
+        "serviceRadius": 123,
+        "createdAt": "2014-01-04T05:40:27.307Z",
+        "updatedAt": "2014-01-04T05:40:27.307Z"
+      },
+      {
+        "id": 5,
+        "isServiceProvider": true,
+        "firstName": "test",
+        "lastName": "test",
+        "address": {
+          "street1": "123",
+          "street2": "",
+          "city": "test",
+          "province": "test",
+          "country": "test"
+        },
+        "email": "test2@test.com",
+        "password": "sha1$8f8fb9c4$1$d53656318c4223ef472548e882ad17b899661436",
+        "serviceRadius": 123,
+        "createdAt": "2014-01-04T05:43:50.278Z",
+        "updatedAt": "2014-01-04T05:43:50.278Z"
       }
     ],
     "servicelist": [
@@ -329,6 +410,13 @@
         "createdAt": "2013-12-30T00:03:07.334Z",
         "updatedAt": "2013-12-30T00:03:07.334Z",
         "id": 4
+      },
+      {
+        "serviceProviderId": 5,
+        "nursing": false,
+        "createdAt": "2014-01-04T05:43:54.692Z",
+        "updatedAt": "2014-01-04T05:43:54.692Z",
+        "id": 5
       }
     ]
   },
@@ -440,13 +528,13 @@
     "user": {},
     "client": {},
     "job": {
-      "id": 10
+      "id": 27
     },
     "serviceprovider": {
       "id": 4
     },
     "servicelist": {
-      "id": 4
+      "id": 5
     }
   }
 }

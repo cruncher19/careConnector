@@ -18,23 +18,27 @@
 module.exports = {
 
     //function to create a new job
-    //accepts title, description, and address as parameters
+    //accepts service, description, and address(optional) as parameters
     create: function(req, res) {
-        var title = req.param('title');
+        var service = req.param('service').toLowerCase();
         var description = req.param('description');
         var address = req.param('address');
+        if( address === undefined )
+            address = req.session.user.address;
         var clientId = req.session.user.id;
+        var clientName = req.session.user.firstName + " " + req.session.user.lastName;
 
         Job.create({
-            title: title,
+            service: service,
             description: description,
             clientId: clientId,
+            clientName: clientName,
             address: address,
             completed: false
         }).done(function(err, job){
-            if(err)
+            if(err) {
                 res.send(500,{error: "DB Error", err: err});
-            else {
+            } else {
                 //if creation was successful redirect the user to the joblist
                 res.send(job);
             }
@@ -46,6 +50,13 @@ module.exports = {
     assign: function(req, res) {
         var assignedServiceProviderId = req.param('assignedServiceProviderId');
         var id = req.param('id');
+
+        Job.find({id: id}).done(function(err, job){
+            if(job.length === 0)
+                return res.send(500,{error: "Job not found in database"});
+            else if(job[0].assignedServiceProviderId)
+                return res.send(500,{error: "Job is already assigned"});
+        });
         
         Job.update({
             id: id
@@ -77,6 +88,17 @@ module.exports = {
                 //if update was successful notify user
                 res.send(job);
             }
+        });
+    },
+
+    createJobPage: function(req, res) {
+        res.view('JobController/createJob');
+    },
+    jobListPage: function(req, res) {
+        Job.find().done(function(err, jobs){
+            return res.view('JobController/jobList',{
+                jobs: jobs
+            });
         });
     },
 

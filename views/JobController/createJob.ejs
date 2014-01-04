@@ -1,0 +1,40 @@
+<div>
+    <h1>Request a Service</h1>
+
+    <select id="serviceDropdown">
+        <option value="1">Nursing</option>
+    </select>
+    <br>
+    
+    <label for="description">Description</label>
+    <input type="text" id="description" placeholder="Description" />
+    <br>
+    <button id="submit">Submit</button>
+    
+</div>
+
+<script>
+    $("#submit").click(function() {
+        var e = document.getElementById("serviceDropdown");
+        var service = e.options[e.selectedIndex].text;
+        var description = $("#description").val();
+
+        $.post('/job/create',{
+            service: service,
+            description: description
+        },
+        function(res) {
+            alert("Service request submitted");
+            if(res.redirectTo)
+                window.location = res.redirectTo;
+        }).fail(function(res) {
+            alert("Error: " + res.getResponseHeader("error"));
+        });
+    });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 13){
+            $("#submit").click();
+        }
+    });
+</script>
