@@ -27,7 +27,23 @@
                     <% } %>
                 </td>
                 <td><%= jobs[i].completed %></td>
+                <td><button class="assign" id=<%= jobs[i].id %>>Take Job</button></td>
             </tr>
         <% } %>
     </table>
 </div>
+
+<script>
+    $(".assign").click(function(event){
+        var jobId = event.target.id;
+        $.post(
+            '/job/assign',
+            {id: jobId}, 
+            function(res) {
+                alert(res.response);
+                window.location.reload();
+        }).fail(function(res) {
+            alert("Error: " + res.getResponseHeader("error"));
+        });
+    });
+</script>

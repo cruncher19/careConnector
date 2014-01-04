@@ -46,30 +46,33 @@ module.exports = {
     },
 
     //function to assign a job to a serviceProvider
-    //accepts assignedServiceProviderId and job id as a parameter
+    //accepts job id as a parameter
     assign: function(req, res) {
-        var assignedServiceProviderId = req.param('assignedServiceProviderId');
-        var id = req.param('id');
-
-        Job.find({id: id}).done(function(err, job){
-            if(job.length === 0)
-                return res.send(500,{error: "Job not found in database"});
-            else if(job[0].assignedServiceProviderId)
-                return res.send(500,{error: "Job is already assigned"});
-        });
-        
-        Job.update({
-            id: id
-        },{
-            assignedServiceProviderId: assignedServiceProviderId
-        }, function(err, job) {
-            if(err) {
-                res.send(500,{error: "Unable to find job in database", err: err});
-            } else {
-                //if update was successful redirect user to Job update sucessful
-                res.send(job);
-            }
-        });
+        console.log("req received");
+        if(req.session.user.isServiceProvider){
+            var assignedServiceProviderId = req.session.user.id;
+            var id = req.param('id');
+    
+            Job.find({id: id}).done(function(err, job){
+                if(job.length === 0)
+                    return res.send(500,{error: "Job not found in database"});
+                else if(job[0].assignedServiceProviderId)
+                    return res.send(500,{error: "Job is already assigned"});
+            });
+            
+            Job.update({
+                id: id
+            },{
+                assignedServiceProviderId: assignedServiceProviderId
+            }, function(err, job) {
+                if(err) {
+                    res.send(500,{error: "Unable to find job in database", err: err});
+                } else {
+                    //if update was successful redirect user to Job update sucessful
+                    res.send(job);
+                }
+            });
+        }
     },
 
     //function to mark a job as complete

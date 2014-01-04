@@ -232,8 +232,9 @@
         },
         "completed": false,
         "createdAt": "2014-01-04T05:27:16.224Z",
-        "updatedAt": "2014-01-04T05:27:16.224Z",
-        "id": 23
+        "updatedAt": "2014-01-04T21:05:16.200Z",
+        "id": 23,
+        "assignedServiceProviderId": 6
       },
       {
         "service": "nursing",
@@ -266,8 +267,9 @@
         },
         "completed": false,
         "createdAt": "2014-01-04T05:27:19.795Z",
-        "updatedAt": "2014-01-04T05:27:19.795Z",
-        "id": 25
+        "updatedAt": "2014-01-04T21:06:25.971Z",
+        "id": 25,
+        "assignedServiceProviderId": 6
       },
       {
         "service": "nursing",
@@ -283,8 +285,9 @@
         },
         "completed": false,
         "createdAt": "2014-01-04T05:27:21.327Z",
-        "updatedAt": "2014-01-04T05:27:21.327Z",
-        "id": 26
+        "updatedAt": "2014-01-04T21:06:24.316Z",
+        "id": 26,
+        "assignedServiceProviderId": 6
       },
       {
         "service": "nursing",
@@ -300,8 +303,9 @@
         },
         "completed": false,
         "createdAt": "2014-01-04T05:27:23.254Z",
-        "updatedAt": "2014-01-04T05:27:23.254Z",
-        "id": 27
+        "updatedAt": "2014-01-04T21:06:19.043Z",
+        "id": 27,
+        "assignedServiceProviderId": 6
       }
     ],
     "serviceprovider": [
@@ -394,6 +398,24 @@
         "serviceRadius": 123,
         "createdAt": "2014-01-04T05:43:50.278Z",
         "updatedAt": "2014-01-04T05:43:50.278Z"
+      },
+      {
+        "id": 6,
+        "isServiceProvider": true,
+        "firstName": "test",
+        "lastName": "test",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "test",
+          "province": "test",
+          "country": "test"
+        },
+        "email": "bradcovey2@gmail.com",
+        "password": "sha1$511f6f9c$1$2784fa020b37c3c77d6f6c0af3fe211ec75d7a66",
+        "serviceRadius": 12,
+        "createdAt": "2014-01-04T14:18:50.864Z",
+        "updatedAt": "2014-01-04T14:18:50.864Z"
       }
     ],
     "servicelist": [
@@ -417,6 +439,13 @@
         "createdAt": "2014-01-04T05:43:54.692Z",
         "updatedAt": "2014-01-04T05:43:54.692Z",
         "id": 5
+      },
+      {
+        "serviceProviderId": 6,
+        "nursing": false,
+        "createdAt": "2014-01-04T14:56:35.874Z",
+        "updatedAt": "2014-01-04T14:56:35.874Z",
+        "id": 6
       }
     ]
   },
@@ -534,7 +563,7 @@
       "id": 4
     },
     "servicelist": {
-      "id": 5
+      "id": 6
     }
   }
 }
