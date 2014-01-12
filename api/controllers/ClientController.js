@@ -103,7 +103,7 @@ module.exports = {
 
                 if(hasher.verify(password, client[0].password)) {
                     req.session.user = client[0];
-                    res.send(client[0]);
+                    res.send({redirectTo: '/job/createjobpage'});
                 } else {
                     res.send(400,{error: "Email or password incorrect"});
                 }

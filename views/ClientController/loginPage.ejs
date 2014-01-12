@@ -1,8 +1,33 @@
 <div>
     <h1>Client Login Page</h1>
     <input type="text" id="email" placeholder="email address" />
-    <input type="text" id="password" placeholder="password" />
+    <input type="password" id="password" placeholder="password" />
     <button id="loginButton">Login</button>
     <a href="registrationpage">Register</a>
 </div>
-<%- partial('partials/loginScript')%>
+<script>
+    $("#loginButton").click(function() {
+        var email = $("#email").val();
+        var password = $("#password").val();
+
+        if( email && password ) {
+            $.post('/client/login', {
+                email: email,
+                password: password},
+                function(res) {
+                    alert("Login Successful");
+                    if(res.redirectTo)
+                        window.location = res.redirectTo;
+                }
+            ).fail(function(res){
+                alert("Error: " + res.getResponseHeader("error"));
+            });
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 13){
+            $("#loginButton").click();
+        }
+    });
+</script>

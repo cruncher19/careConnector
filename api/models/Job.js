@@ -24,6 +24,10 @@ module.exports = {
         type: 'string',
         required: true
     },
+    date: {
+        type: 'date',
+        required: true
+    },
     assignedServiceProviderId: {
         type: 'integer'
     },

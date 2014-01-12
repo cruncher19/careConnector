@@ -1,0 +1,87 @@
+<div>
+    <%- partial('../general/serviceProviderNavbar')%>
+    <h1>List of Jobs</h1>
+    <h3>Current Jobs</h3>
+    <table style="text-align: center;">
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Client Name</th>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Completed</th>
+        </tr>
+        <% for(var i=0; i<jobs.length; i++) {%>
+            <% if(!jobs[i].completed) { %>
+                <tr>
+                    <td><%= jobs[i].service %></td>
+                    <td><%= jobs[i].description %></td>
+                    <td><%= jobs[i].clientName %></td>
+                    <td><% if(jobs[i].date) {%>
+                        <%= jobs[i].date %>
+                        <% } else { %>
+                            undefined
+                        <% }%>
+                    </td>
+                    <td><%= jobs[i].address.street1 %>
+                        <% if(jobs[i].address.street2) {%>
+                            <%= jobs[i].address.street2 %>
+                        <% } %>
+                        <%= jobs[i].address.city %>, <%= jobs[i].address.province %>
+                    </td>
+                    <td><%= jobs[i].completed %></td>
+                    <td><button class="complete" id=<%= jobs[i].id %>>Mark Complete</button></td>
+                </tr>
+            <% } %>
+        <% } %>
+    </table>
+    <br>
+    <h3>Completed Jobs</h3>
+    <table style="text-align: center;">
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Client Name</th>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Completed</th>
+        </tr>
+        <% for(var i=0; i<jobs.length; i++) {%>
+            <% if(jobs[i].completed) { %>
+                <tr>
+                    <td><%= jobs[i].service %></td>
+                    <td><%= jobs[i].description %></td>
+                    <td><%= jobs[i].clientName %></td>
+                    <td><% if(jobs[i].date) {%>
+                        <%= jobs[i].date %>
+                        <% } else { %>
+                            undefined
+                        <% }%>
+                    </td>
+                    <td><%= jobs[i].address.street1 %>
+                        <% if(jobs[i].address.street2) {%>
+                            <%= jobs[i].address.street2 %>
+                        <% } %>
+                        <%= jobs[i].address.city %>, <%= jobs[i].address.province %>
+                    </td>
+                    <td><%= jobs[i].completed %></td>
+                </tr>
+            <% } %>
+        <% } %>
+    </table>
+</div>
+
+<script>
+    $(".complete").click(function(event){
+        var jobId = event.target.id;
+        $.post(
+            '/job/markComplete',
+            {id: jobId}, 
+            function(res) {
+                alert(res.response);
+                window.location.reload();
+        }).fail(function(res) {
+            alert("Error: " + res.getResponseHeader("error"));
+        });
+    });
+</script>

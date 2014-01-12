@@ -26,6 +26,7 @@ module.exports = {
         if( address === undefined )
             address = req.session.user.address;
         var clientId = req.session.user.id;
+        var date = req.param('date');
         var clientName = req.session.user.firstName + " " + req.session.user.lastName;
 
         Job.create({
@@ -34,6 +35,7 @@ module.exports = {
             clientId: clientId,
             clientName: clientName,
             address: address,
+            date: date,
             completed: false
         }).done(function(err, job){
             if(err) {
@@ -104,12 +106,20 @@ module.exports = {
             });
         });
     },
+    myJobsPage: function(req, res) {
+        Job.find({assignedServiceProviderId: req.session.user.id}).done(
+            function(err, jobs) {
+                return res.view('JobController/myJobs',{
+                    jobs: jobs
+                });
+            }
+        );
+    },
 
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to JobController)
-   */
-  _config: {}
-
-  
+    /**
+    * Overrides for the settings in `config/controllers.js`
+    * (specific to JobController)
+    */
+    _config: {}
+      
 };
