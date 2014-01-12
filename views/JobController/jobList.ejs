@@ -1,6 +1,6 @@
-<div>
+<div class="container">
     <%- partial('../general/serviceProviderNavbar')%>
-    <h1>List of Jobs</h1>
+    <h1>List of Available Jobs</h1>
     <table style="text-align: center;">
         <tr>
             <th>Service</th>
@@ -13,31 +13,33 @@
             <th></th>
         </tr>
         <% for(var i=0; i<jobs.length; i++) {%>
-            <tr>
-                <td><%= jobs[i].service %></td>
-                <td><%= jobs[i].description %></td>
-                <td><%= jobs[i].clientName %></td>
-                <td><% if(jobs[i].date) {%>
-                    <%= jobs[i].date %>
-                    <% } else { %>
-                        undefined
-                    <% }%>
-                </td>
-                <td><%= jobs[i].address.street1 %>
-                    <% if(jobs[i].address.street2) {%>
-                        <%= jobs[i].address.street2 %>
-                    <% } %>
-                    <%= jobs[i].address.city %>, <%= jobs[i].address.province %>
-                </td>
-                <td><% if(jobs[i].assignedServiceProviderId) { %>
-                        yes
-                    <% } else { %>
-                        no
-                    <% } %>
-                </td>
-                <td><%= jobs[i].completed %></td>
-                <td><button class="assign" id=<%= jobs[i].id %>>Take Job</button></td>
-            </tr>
+            <% if(!jobs[i].assignedServiceProviderId){ %>
+                <tr>
+                    <td><%= jobs[i].service %></td>
+                    <td><%= jobs[i].description %></td>
+                    <td><%= jobs[i].clientName %></td>
+                    <td><% if(jobs[i].date) {%>
+                        <%= jobs[i].date %>
+                        <% } else { %>
+                            undefined
+                        <% }%>
+                    </td>
+                    <td><%= jobs[i].address.street1 %>
+                        <% if(jobs[i].address.street2) {%>
+                            <%= jobs[i].address.street2 %>
+                        <% } %>
+                        <%= jobs[i].address.city %>, <%= jobs[i].address.province %>
+                    </td>
+                    <td><% if(jobs[i].assignedServiceProviderId) { %>
+                            yes
+                        <% } else { %>
+                            no
+                        <% } %>
+                    </td>
+                    <td><%= jobs[i].completed %></td>
+                    <td><button class="assign" id=<%= jobs[i].id %>>Take Job</button></td>
+                </tr>
+            <% } %>
         <% } %>
     </table>
 </div>

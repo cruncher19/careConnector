@@ -1,4 +1,4 @@
-<div>
+<div class='container'>
     <h1>Request a Service</h1>
 
     <select id="serviceDropdown">
@@ -7,7 +7,7 @@
     <br>
     
     <label for="description">Description</label>
-    <input type="text" id="description" placeholder="Description" />
+    <textarea id="description" rows="4" cols="50">Description</textarea>
     <br>
     <label for="hour">Hour: </label>
     <select id="hour">
@@ -87,6 +87,7 @@
         },
         function(res) {
             alert("Service request submitted");
+            window.location.reload(true);
             if(res.redirectTo)
                 window.location = res.redirectTo;
         }).fail(function(res) {

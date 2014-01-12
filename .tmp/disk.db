@@ -360,6 +360,79 @@
         "updatedAt": "2014-01-11T23:31:15.317Z",
         "id": 30,
         "assignedServiceProviderId": 6
+      },
+      {
+        "service": "nursing",
+        "description": "I require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurseI require the care of a nurse",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "date": "Sun Jan 12 2014 01:00:00 GMT-0400 (AST)",
+        "completed": true,
+        "createdAt": "2014-01-12T13:43:17.204Z",
+        "updatedAt": "2014-01-12T13:44:14.477Z",
+        "id": 31,
+        "assignedServiceProviderId": 6
+      },
+      {
+        "service": "nursing",
+        "description": "Service Description",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "date": "Sat Jan 25 2014 01:00:00 GMT-0400 (AST)",
+        "completed": false,
+        "createdAt": "2014-01-12T13:51:20.958Z",
+        "updatedAt": "2014-01-12T13:51:20.958Z",
+        "id": 32
+      },
+      {
+        "service": "nursing",
+        "description": "Service Description",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "date": "Sat Jan 25 2014 01:00:00 GMT-0400 (AST)",
+        "completed": false,
+        "createdAt": "2014-01-12T13:52:32.211Z",
+        "updatedAt": "2014-01-12T13:52:32.211Z",
+        "id": 33
+      },
+      {
+        "service": "nursing",
+        "description": "Description",
+        "clientId": 11,
+        "clientName": "Brad Covey",
+        "address": {
+          "street1": "test",
+          "street2": "",
+          "city": "city",
+          "province": "province",
+          "country": "country"
+        },
+        "date": "Mon Jan 02 1234 01:00:00 GMT-0400 (AST)",
+        "completed": false,
+        "createdAt": "2014-01-12T13:55:10.543Z",
+        "updatedAt": "2014-01-12T13:55:10.543Z",
+        "id": 34
       }
     ],
     "serviceprovider": [
@@ -611,7 +684,7 @@
     "user": {},
     "client": {},
     "job": {
-      "id": 30
+      "id": 34
     },
     "serviceprovider": {
       "id": 4

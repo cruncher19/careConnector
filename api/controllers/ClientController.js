@@ -82,7 +82,7 @@ module.exports = {
                         //session user equal to the newly created
                         //serviceProvider
                         req.session.user = client;
-                        res.send(client);
+                        res.send({redirectTo:'/client/loginpage'});
                     }
                 });
             }

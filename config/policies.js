@@ -16,7 +16,34 @@ module.exports.policies = {
 
   // Default policy for all controllers and actions
   // (`true` allows public access) 
-  '*': true
+  '*': false,
+  ClientController: {
+  	'*': false,
+  	register: true,
+  	login: true,
+  	registrationPage: true,
+  	loginPage: true
+  },
+  ServiceProviderController: {
+  	'*': false,
+  	register: true,
+  	login: true,
+  	registrationPage: true,
+  	loginPage: true,
+  	getServiceList: ['isAuthenticated','isServiceProvider']
+  },
+  JobController: {
+  	'*': false,
+  	create: ['isAuthenticated','isClient'],
+  	assign: ['isAuthenticated','isServiceProvider'],
+  	markComplete: ['isAuthenticated','isServiceProvider'],
+  	createJobPage: ['isAuthenticated','isClient'],
+  	jobListPage: ['isAuthenticated','isServiceProvider'],
+  	myJobsPage: ['isAuthenticated','isServiceProvider']
+  },
+  ServiceListController: {
+  	'*': ['isAuthenticated','isServiceProvider']
+  }
 
   /*
 	// Here's an example of adding some policies to a controller
